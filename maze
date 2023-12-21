@@ -1,0 +1,19 @@
+def turn_around():
+    turn_left()
+    turn_left()
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+  
+      
+while not at_goal():   
+    if front_is_clear() and wall_on_right(): # turning right if it can
+        move()
+    elif right_is_clear(): # going straight ahead if it can’t turn right
+        turn_right()
+        move()
+    else: # turning left as a last resort
+        turn_left()
+        
